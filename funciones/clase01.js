@@ -1,5 +1,6 @@
 // funcion declarativa
 function miFuncion(a,b) {
+    console.log(arguments.length) // 2 las propiedades de un objeto es admitido en funciones
     return a+b;
 }
 
@@ -21,3 +22,10 @@ console.log(resultado1);
 (function (a,b){
     console.log("Ejecutando la función " + (a+b));
 })(3,4)
+
+// funciones como objetos
+function funcionObjeto(a,b) {
+    return a+b;
+}
+let miFuncionTexto= funcionObjeto.toString(); // funcion que se comporta como los métodos de un objeto
+console.log(miFuncionTexto);
