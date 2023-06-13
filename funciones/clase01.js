@@ -1,9 +1,12 @@
 // Funcion Expresion
-let x = function(a,b){return a+b};
-let resultado1 = x(1,2);
-console.log(resultado1);
+let sumar = function(a=4,b=5){
+    console.log(arguments[0]);
+    console.log(arguments[1]);
+    console.log(arguments[2]);
+    return a+b+arguments[2];
+};
+let resultado = sumar(3,6,7); // En js no es necesario que el número de argumentos sea igual que el de los parámetros
+console.log(resultado);
 
-// funcion flecha
-const sumarFunctionTipoFlecha = (a,b) => a+b;
-resultado1 = sumarFunctionTipoFlecha(8,2);
-console.log(resultado1);
+
+
